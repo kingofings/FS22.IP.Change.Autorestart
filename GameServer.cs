@@ -23,15 +23,4 @@ internal class GameServer
 
         return Task.FromResult(true);
     }
-    public Task<bool> IsDedicatedServerRunning()
-    {
-        var p = Process.GetProcessesByName("dedicatedServer");
-
-        if (p.Length == 0)
-        {
-            return Task.FromResult(false);
-        }
-
-        return Task.FromResult(true);
-    }
 }

@@ -12,7 +12,6 @@ namespace FS22.IP.Change.Autorestart;
 internal class ServerLauncher
 {
     public string? EpicGamesShortCut { get; set; }
-    //public string? EpicGamesDedicatedServerShortCut { get; set; }
 
     public ServerLauncher()
     {
@@ -20,7 +19,6 @@ internal class ServerLauncher
         if (jsonFile is not null)
         {
             EpicGamesShortCut = jsonFile["shortcut"];
-            //EpicGamesDedicatedServerShortCut = jsonFile["shortcutserver"];
         }
     }
 
@@ -38,17 +36,5 @@ internal class ServerLauncher
         var gameServer = new GameServer();
 
         return Task.CompletedTask;
-
-        /*while (!await gameServer.IsGameRunning())
-        {
-            continue;
-        }
-
-        p = new Process();
-
-        info = new ProcessStartInfo();
-        info.FileName = EpicGamesDedicatedServerShortCut; 
-        p.StartInfo = info;
-        p.Start();*/
     }
 }
