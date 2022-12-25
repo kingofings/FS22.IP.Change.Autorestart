@@ -15,11 +15,6 @@ namespace FS22.IP.Change.Autorestart
             {
                 p.Kill();
             }
-
-            foreach (var p in Process.GetProcessesByName("dedicatedServer"))
-            {
-                p.Kill();
-            }
             return Task.CompletedTask;
         }
     }
