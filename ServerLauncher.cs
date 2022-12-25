@@ -33,8 +33,6 @@ internal class ServerLauncher
 
         p.Start();
 
-        var gameServer = new GameServer();
-
         return Task.CompletedTask;
     }
 }
